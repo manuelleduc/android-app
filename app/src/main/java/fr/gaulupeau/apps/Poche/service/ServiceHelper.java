@@ -19,6 +19,7 @@ public class ServiceHelper {
 
     public static void addLink(Context context, String link) {
         addLink(context, link, null);
+        syncAndUpdate(context, new Settings(context),  Updater.UpdateType.FAST, false);
     }
 
     private static void addLink(Context context, String link, Long operationID) {
